@@ -5,6 +5,15 @@
 #include <math.h>
 #include <time.h>
 
+//Quintus Kilbourn 54871935
+//Rohit Shyla Kumar 54581876
+
+
+//error handling
+//comments
+//pthread_exit (try reduce number of global var by pthreadjoin)
+//refactor code
+//upload
 
 using namespace std;
 
