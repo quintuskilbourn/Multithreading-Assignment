@@ -9,11 +9,12 @@
 //Rohit Shyla Kumar 54581876
 
 
-//error handling
+//error handling (also for execution without args)
 //comments
 //pthread_exit (try reduce number of global var by pthreadjoin)
 //refactor code
 //upload
+
 
 using namespace std;
 
@@ -115,7 +116,7 @@ void *serve(void *args){
           }
         }
       }
-      cout<<"\t\t\t\t\t"<<queueLen<<"\t\t"<<fetched<<"\t\t"<<fetched<<endl;
+      cout<<"\t\t\t\t\t"<<queueLen<<"\t\t"<<fetched<<"\t\t"<<totFetch<<endl;
       if(pthread_mutex_unlock(&mtx)){
         cout<<"Mutex Unlock Error"<<endl;
         exit(-1);
