@@ -76,6 +76,21 @@ bool MyQueue::EnQueue(int token){
   }
 }
 
+
+
+// void servIncrement(MyQueue* queue){
+//   if(queue->DeQueue()==-1){
+//     cout<<"DeQueue not successfull"<<endl;
+//     exit(-1);
+//   }
+//   totFetch++;
+//   queueLen--;
+//   servTok++;
+// }
+
+
+
+
 void *serve(void *args){
 
   MyQueue** temp = (MyQueue**)args;
@@ -105,13 +120,14 @@ void *serve(void *args){
         fetched = ran;
         for(int i = 0; i<ran; i++){
           if(queue->DeQueue()==-1){
-            cout<<"DeQueue not successfull"<<endl;
+            cout<<"DeQueue not successfull"<<endl;     
             exit(-1);
           }
           totFetch++;
           queueLen--;
           servTok++;
-          if(servTok>=maxC){
+          if(servTok>=maxC){   //fetched will be wrong when servTok>=maxC (same in line 115) - could work with commented code below but that wont work for 115
+            //fetched = i+1;
             break;
           }
         }
