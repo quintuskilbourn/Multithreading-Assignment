@@ -91,10 +91,10 @@ void *serve(void *args){
         exit(-1);
       }
       if(ran >= queueLen){
-        fetched = queueLen;
+        fetched = queueLen;         
         while(!(queue->isEmpty())){
           queue->DeQueue();
-          totFetch++;
+          totFetch++;           //Im pretty sure we can leave all these increments for after the if/else adn then use += or -= fetched
           queueLen--;
           servTok++;
           if(servTok>=maxC){
