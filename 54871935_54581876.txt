@@ -1,10 +1,23 @@
+CS3103 Operating Systems Assignemnt 2 
+
+Completed by: 
 54871935 - KILBOURN Quintus Jonathan
+
 54581876 - SHYLA KUMAR Rohit
 
+
+
 File must be compiled using 'lpthread'
-    g++ 54871935_54581876.cpp -o SFIFO -lpthread
+    
+g++ 54871935_54581876.cpp MyQueue.cpp MyQueue.cpp -o SFIFO -lpthread
+
+
 
 
 File must be executed with two integer arguments
-    ./SFIFO 30 1
-    where 30 is Max Token and 1 is the interval of the flow (flow interval)
+    
+
+./SFIFO 30 1
+    
+
+where 30 is Max Token and 1 is the interval of the flow (flow interval)
