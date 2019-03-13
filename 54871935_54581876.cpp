@@ -1,5 +1,5 @@
 /*
-CS3103 Assginment 2
+CS3103 Assignment 2
 Completed by:
 Quintus Kilbourn (54871935)
 Rohit Shyla Kumar (54581876)
