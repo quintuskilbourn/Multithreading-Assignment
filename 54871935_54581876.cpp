@@ -187,8 +187,9 @@ Main thread creates other threads and displays outputs
 int main(int argc, char* argv[])
 {
 	//Extracting command line arguments for max count of tokens to be served and flow interval
-	int maxC = strtol(argv[1],NULL,10);
-	int flowInt = strtol(argv[2],NULL,10);
+	//abs() ensures no negative values crash the program
+	int maxC = abs(strtol(argv[1],NULL,10));		
+	int flowInt = abs(strtol(argv[2],NULL,10));
 
 	//Store thread ids of different threads
 	pthread_t flowId, servId;
